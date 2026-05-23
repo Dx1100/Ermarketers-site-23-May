@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages serves 404.html on unknown routes.
+      // This redirects to `/?p=<path>&q=<query>` so index.html can restore the route.
+      (function () {
+        var locationObj = window.location;
+        var pathParts = locationObj.pathname.split("/");
+        // Keep the repo segment (e.g. "/my-repo") so the redirect stays within the project.
+        var repoBase = pathParts.length > 1 ? "/" + pathParts[1] : "";
+        var pathWithoutBase = locationObj.pathname.slice(repoBase.length);
+        var newSearch =
+          "?p=" +
+          encodeURIComponent(pathWithoutBase) +
+          (locationObj.search ? "&q=" + encodeURIComponent(locationObj.search.slice(1)) : "");
+
+        locationObj.replace(repoBase + "/" + newSearch + locationObj.hash);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

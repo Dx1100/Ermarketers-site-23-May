@@ -1,0 +1,169 @@
+{
+  "brand": {
+    "logoLetter": "E",
+    "namePlain": "ER",
+    "nameAccent": "Marketers"
+  },
+  "nav": {
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Case Studies", "href": "/case-studies" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "ctaLabel": "Get Started",
+    "ctaHref": "/contact"
+  },
+  "home": {
+    "seoTitle": "ER Marketers | Digital Growth Agency",
+    "heroBadge": "India's Premier Growth Agency",
+    "heroHeadlineLines": ["We Drive", "Digital Growth"],
+    "heroSubheadline": "We transform ambitious brands into market leaders through data-driven performance marketing, SEO, and AI-powered strategies.",
+    "trustedByLabel": "Trusted by industry leaders",
+    "trustedByBrands": ["TechCorp", "Innovate", "ScaleUp", "GlobalReach", "Apex Brands"],
+    "stats": [
+      { "value": "200+", "label": "Clients Scaled" },
+      { "value": "INR 500Cr+", "label": "Ad Spend Managed" },
+      { "value": "8+", "label": "Years Experience" }
+    ],
+    "services": [
+      {
+        "icon": "barChart3",
+        "title": "Performance Marketing",
+        "desc": "Data-driven ad campaigns across Google & Meta that maximize ROI and lower acquisition costs."
+      },
+      {
+        "icon": "search",
+        "title": "SEO & Content",
+        "desc": "Dominate search rankings and drive high-intent organic traffic to your website consistently."
+      },
+      {
+        "icon": "sparkles",
+        "title": "AI Content Creation",
+        "desc": "Scale your content output 10x using proprietary AI workflows without losing the human touch."
+      },
+      {
+        "icon": "target",
+        "title": "Marketing Strategy",
+        "desc": "Comprehensive go-to-market strategies tailored for the hyper-competitive Indian landscape."
+      }
+    ],
+    "caseStudies": [
+      {
+        "client": "FashionIndia",
+        "industry": "E-commerce",
+        "metric": "+320%",
+        "metricLabel": "ROAS on Meta Ads",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop"
+      },
+      {
+        "client": "TechStartup Mumbai",
+        "industry": "SaaS",
+        "metric": "2.5x",
+        "metricLabel": "Organic Traffic YoY",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+      },
+      {
+        "client": "EduTech Hub",
+        "industry": "EdTech",
+        "metric": "-45%",
+        "metricLabel": "Cost Per Lead",
+        "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
+      }
+    ]
+  },
+  "servicesPage": {
+    "seoTitle": "ER Marketers | Our Services",
+    "seoDescription": "Comprehensive digital marketing services including Performance Marketing, SEO, AI Content, and Strategy.",
+    "heroEyebrow": "CAPABILITIES",
+    "heroTitle": "Our Services",
+    "heroSubtitle": "End-to-end digital growth solutions designed to elevate your brand, capture high-intent leads, and multiply your revenue.",
+    "services": [
+      {
+        "id": "performance",
+        "icon": "barChart3",
+        "title": "Performance Marketing",
+        "description": "Scale your revenue profitably with our advanced performance marketing strategies. We manage millions in ad spend across major platforms, focusing purely on metrics that matter: CPA, CAC, and ROAS.",
+        "features": [
+          "Google Ads (Search, Display, Performance Max)",
+          "Meta Ads (Facebook & Instagram)",
+          "Programmatic Advertising",
+          "Advanced Retargeting Funnels",
+          "Conversion Rate Optimization (CRO)"
+        ]
+      },
+      {
+        "id": "seo",
+        "icon": "search",
+        "title": "SEO & Content Strategy",
+        "description": "Build an organic growth engine that delivers high-intent traffic month over month. Our holistic approach combines technical excellence with authoritative content creation tailored for the Indian market.",
+        "features": [
+          "Comprehensive Technical SEO Audits",
+          "High-Authority Link Building",
+          "Local SEO Optimization for Indian Cities",
+          "Keyword Research & Mapping",
+          "Content Marketing Strategy"
+        ]
+      },
+      {
+        "id": "ai",
+        "icon": "sparkles",
+        "title": "AI Content Creation",
+        "description": "Leverage cutting-edge AI technology to produce high-quality, relevant content at scale. We combine AI efficiency with human editorial oversight to maintain brand voice across multiple languages.",
+        "features": [
+          "AI-Powered Blog & Article Generation",
+          "Automated Social Media Scheduling",
+          "Multilingual Content (English & Hindi)",
+          "Email Marketing Copywriting",
+          "Product Description Generation"
+        ]
+      },
+      {
+        "id": "consultation",
+        "icon": "target",
+        "title": "Marketing Consultation",
+        "description": "Don't know where to start? Our seasoned strategists act as your fractional CMOs, building a custom blueprint for your brand's digital dominance.",
+        "features": [
+          "Brand Strategy & Positioning",
+          "Go-to-Market (GTM) Planning",
+          "Advanced Analytics Setup",
+          "Competitor Analysis & Benchmarking",
+          "Marketing Tech Stack Architecture"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "India's premier digital marketing agency. We build scalable growth engines for ambitious brands.",
+    "companyLinks": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Case Studies", "href": "/case-studies" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "serviceLinks": [
+      { "label": "Performance Marketing", "href": "/services" },
+      { "label": "SEO & Content", "href": "/services" },
+      { "label": "AI Content Creation", "href": "/services" },
+      { "label": "Consultation", "href": "/services" }
+    ],
+    "newsletterTitle": "Stay Updated",
+    "newsletterBlurb": "Get the latest growth marketing strategies in your inbox.",
+    "contactEmail": "hello@ermarketers.in",
+    "contactPhoneDisplay": "+91 98765 43210",
+    "contactPhoneTel": "+919876543210",
+    "social": {
+      "twitter": "#",
+      "linkedin": "#",
+      "instagram": "#"
+    },
+    "legal": {
+      "privacyLabel": "Privacy Policy",
+      "privacyHref": "#",
+      "termsLabel": "Terms of Service",
+      "termsHref": "#"
+    },
+    "copyrightTail": "All rights reserved. Built with love in Mumbai."
+  }
+}

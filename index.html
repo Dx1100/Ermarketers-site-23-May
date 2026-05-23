@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>ER Marketers</title>
+    <script>
+      // GitHub Pages SPA refresh support:
+      // If 404.html redirected us to `/?p=...`, restore the intended URL.
+      (function () {
+        var locationObj = window.location;
+        if (!locationObj.search) return;
+
+        var params = new URLSearchParams(locationObj.search);
+        var p = params.get("p");
+        if (!p) return;
+
+        var q = params.get("q");
+        var restoredPath = "/" + decodeURIComponent(p).replace(/^\/+/, "");
+        var restoredQuery = q ? "?" + decodeURIComponent(q) : "";
+
+        window.history.replaceState(
+          null,
+          "",
+          locationObj.pathname.replace(/\/$/, "") + restoredPath + restoredQuery + locationObj.hash
+        );
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+  </html>
