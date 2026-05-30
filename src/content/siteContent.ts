@@ -58,6 +58,8 @@ export type SiteContent = {
     contactEmail: string;
     contactPhoneDisplay: string;
     contactPhoneTel: string;
+    contactPhoneDisplay2?: string;
+    contactPhoneTel2?: string;
     social: { twitter: string; linkedin: string; instagram: string };
     legal: { privacyLabel: string; privacyHref: string; termsLabel: string; termsHref: string };
     copyrightTail: string;
