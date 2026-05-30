@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 export default function CaseStudies() {
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "E-Commerce", "Edtech"];
+  const categories = ["All", "E-Commerce", "Edtech", "Services"];
 
   const caseStudies = [
     {
@@ -31,6 +31,18 @@ export default function CaseStudies() {
         { label: "Increase in Online Course Sales", value: "+40%" },
         { label: "Lead Quality", value: "Improved" },
         { label: "Market Focus", value: "Delhi" },
+      ],
+    },
+    {
+      id: 3,
+      client: "Service Brand",
+      industry: "Services",
+      challenge: "Low lead-to-opportunity conversion rates from search campaigns.",
+      approach: "Overhauled the lead collection funnel, optimized landing page speed, and implemented value-based campaign bidding.",
+      metrics: [
+        { label: "Increase in Leads", value: "+40%" },
+        { label: "Conversion Rate", value: "+23%" },
+        { label: "Cost Per Lead (CPL)", value: "-30%" },
       ],
     },
   ];
