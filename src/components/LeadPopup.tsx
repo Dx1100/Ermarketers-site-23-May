@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { X, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { X, ArrowRight, CheckCircle2, Sparkles, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "ermarketers_popup_date";
@@ -53,6 +53,9 @@ export function LeadPopup() {
   const [fields, setFields] = useState<FormState>({ name: "", email: "", phone: "" });
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormState, boolean>>>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [serverError, setServerError] = useState("");
+  const leadsEndpoint = import.meta.env.VITE_LEADS_ENDPOINT?.trim();
 
   const showPopup = useCallback(() => {
     if (hasShownToday() || dismissed) return;
@@ -101,18 +104,57 @@ export function LeadPopup() {
     setErrors(validate({ ...fields, [name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const allTouched = { name: true, email: true, phone: true };
     setTouched(allTouched);
     const errs = validate(fields);
     setErrors(errs);
     if (Object.keys(errs).length > 0) return;
-    setSubmitted(true);
-    setTimeout(() => {
-      setVisible(false);
-      setDismissed(true);
-    }, 2800);
+
+    if (!leadsEndpoint) {
+      // Fallback if not configured yet, so the user doesn't get blocked in dev
+      setSubmitted(true);
+      setTimeout(() => {
+        setVisible(false);
+        setDismissed(true);
+      }, 2800);
+      return;
+    }
+
+    setSubmitting(true);
+    setServerError("");
+
+    try {
+      const res = await fetch(leadsEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fields.name,
+          email: fields.email,
+          phone: fields.phone,
+          company: "N/A (Popup Capture)",
+          service: "Free Growth Audit",
+          message: "Lead captured via homepage pop-up modal.",
+          source: "popup-modal",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setVisible(false);
+          setDismissed(true);
+        }, 2800);
+      } else {
+        setServerError("Failed to submit. Please try again.");
+      }
+    } catch {
+      setServerError("Network error. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (!visible) return null;
@@ -244,8 +286,13 @@ export function LeadPopup() {
                   )}
                 </div>
 
+                {serverError && (
+                  <p className="text-xs text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg px-3 py-2 text-center">{serverError}</p>
+                )}
+
                 <button
                   type="submit"
+                  disabled={submitting}
                   className={cn(
                     "relative w-full h-12 mt-2 rounded-xl font-semibold text-white text-sm overflow-hidden",
                     "bg-gradient-to-r from-[#FF7A00] via-[#FFB366] to-[#D45D00] bg-[length:200%_auto]",
@@ -254,11 +301,21 @@ export function LeadPopup() {
                     "transition-all duration-300",
                     "hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(255,122,0,0.6)]",
                     "active:scale-[0.98] active:translate-y-0",
-                    "btn-shine"
+                    "btn-shine",
+                    submitting && "opacity-80 cursor-not-allowed"
                   )}
                 >
-                  Claim My Free Audit
-                  <ArrowRight className="w-4 h-4" />
+                  {submitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Claiming...
+                    </>
+                  ) : (
+                    <>
+                      Claim My Free Audit
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
 
                 <p className="text-center text-xs text-white/30 pt-1">

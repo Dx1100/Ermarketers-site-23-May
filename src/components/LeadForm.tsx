@@ -30,6 +30,7 @@ const SERVICE_OPTIONS = [
   { value: "ai-content", label: "AI Content Creation" },
   { value: "consulting", label: "Marketing Consultation" },
   { value: "full-funnel", label: "Full Funnel Strategy" },
+  { value: "website-development", label: "Website Development" },
 ];
 
 function validate(fields: Record<string, string>): FieldErrors {
