@@ -8,13 +8,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function AboutNew() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    
+
     document.querySelectorAll("[data-count-up]").forEach((el) => {
       const targetStr = el.getAttribute("data-count-value") || "0";
-      // Removing any non-numeric chars from target before parsing if needed, but in this case we expect clean numbers in data-count-value
       const target = Number(targetStr);
       ScrollTrigger.create({
         trigger: el,
@@ -25,61 +24,61 @@ export default function About() {
             val: target,
             duration: 2,
             ease: "power2.out",
-            onUpdate() { el.textContent = Math.round(this.targets()[0].val).toString(); },
+            onUpdate() {
+              el.textContent = Math.round(this.targets()[0].val).toString();
+            },
           });
         },
       });
     });
 
-    return () => ScrollTrigger.getAll().forEach(t => t.kill());
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
   const stats = [
-    { value: "8", suffix: "+", label: "Years Experience" },
-    { value: "200", suffix: "+", label: "Clients Scaled" },
+    { value: "8", suffix: "+", label: "Years of Digital Growth Experience" },
+    { value: "80", suffix: "+", label: "Clients Scaled" },
     { value: "50", suffix: "+", label: "Digital Experts" },
-    { value: "500", prefix: "₹", suffix: "Cr+", label: "Ad Spend Managed" }
+    { value: "30", prefix: "₹", suffix: "Lac+/mo", label: "Ad Spend Managed" },
   ];
 
   const values = [
-    { icon: <Target className="w-6 h-6 text-primary" />, title: "Data-Driven", desc: "Every decision is backed by solid analytics, not gut feeling." },
-    { icon: <Eye className="w-6 h-6 text-primary" />, title: "Transparent", desc: "Complete visibility into where every rupee of your budget goes." },
-    { icon: <Zap className="w-6 h-6 text-primary" />, title: "Results-Focused", desc: "We tie our success to your bottom-line business metrics." },
-    { icon: <Award className="w-6 h-6 text-primary" />, title: "Innovation-First", desc: "Constantly adopting new AI tools and beta platforms." }
+    { icon: <Target className="w-6 h-6 text-primary" />, title: "Data-Led Decisions", desc: "We use evidence, testing, and tracking to guide growth decisions." },
+    { icon: <Eye className="w-6 h-6 text-primary" />, title: "Clear Communication", desc: "Clients get visibility into performance, priorities, and next actions." },
+    { icon: <Zap className="w-6 h-6 text-primary" />, title: "Commercial Focus", desc: "We care about revenue impact, lead quality, and profitability." },
+    { icon: <Award className="w-6 h-6 text-primary" />, title: "Continuous Improvement", desc: "We test, refine, and adapt to keep performance moving forward." },
   ];
 
   const team = [
-    { name: "Rahul Desai", role: "Founder & CEO" },
-    { name: "Neha Sharma", role: "Head of Performance" },
-    { name: "Vikram Singh", role: "SEO Director" },
-    { name: "Pooja Mehta", role: "Creative Director" },
-    { name: "Arjun Nair", role: "Lead Data Analyst" },
-    { name: "Sanya Gupta", role: "Client Success Head" }
+    { name: "Performance Marketing", role: "Paid media planning, testing, and optimization" },
+    { name: "SEO Strategy", role: "Search visibility, structure, and content growth" },
+    { name: "AI Content Systems", role: "Faster production with human-reviewed quality" },
+    { name: "Website Development", role: "SEO-friendly websites built for conversion" },
+    { name: "Analytics", role: "Tracking clarity across channels and funnels" },
+    { name: "Client Strategy", role: "Practical growth planning and execution support" },
   ];
 
   return (
-    <Layout title="Er marketers | About Us" description="Learn about the team driving digital growth for India's top brands.">
-      {/* Hero */}
+    <Layout title="About ER Marketers | Performance And AI Driven Marketing Agency" description="Learn how ER Marketers helps brands grow through performance marketing, SEO, creative strategy, and measurable digital execution.">
       <section className="pt-32 pb-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
-           <img src={`${import.meta.env.BASE_URL}images/about-story.png`} alt="Abstract" className="w-full h-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/about-story.png`} alt="Abstract" className="w-full h-full object-cover" />
         </div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Reveal>
             <div className="max-w-4xl">
               <div className="inline-block px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-wider mb-6">OUR STORY</div>
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-8">Built for the <span className="text-gradient">Ambitious</span></h1>
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-8">Built for Brands That Want <span className="text-gradient">Smarter Growth</span></h1>
               <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-medium">
-                Er marketers was founded with a singular mission: to provide enterprise-level digital marketing sophistication to ambitious Indian brands. We are a collective of data scientists, creative strategists, and growth hackers.
+                ER Marketers was built to help ambitious businesses grow with sharper strategy, stronger execution, and measurable digital outcomes. We combine performance marketing, SEO, creative thinking, and data analysis to help brands scale with more confidence.
               </p>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Stats */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel-strong gradient-border rounded-[2.5rem] p-10 md:p-16">
@@ -99,13 +98,12 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
       <section className="py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Our <span className="text-primary">DNA</span></h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">The core principles that guide our work, our hiring, and our client relationships.</p>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">The principles that shape how we plan campaigns, communicate with clients, and improve results over time.</p>
             </div>
           </Reveal>
 
@@ -128,18 +126,17 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
       <section className="py-32 bg-card/20 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-20 gap-6">
               <div>
-                <h2 className="text-4xl md:text-5xl font-extrabold mb-4">Meet the <span className="text-primary">Experts</span></h2>
-                <p className="text-xl text-muted-foreground">The minds behind the growth engines.</p>
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-4">Core <span className="text-primary">Capabilities</span></h2>
+                <p className="text-xl text-muted-foreground">The skill areas that support strategy, execution, and measurable growth.</p>
               </div>
               <div className="flex items-center gap-3 px-5 py-3 rounded-full glass-panel border border-white/10 text-white font-medium">
                 <Users className="w-5 h-5 text-primary" />
-                <span>50+ strong team</span>
+                <span>Performance, SEO, AI, and web support</span>
               </div>
             </div>
           </Reveal>
@@ -151,8 +148,8 @@ export default function About() {
                   <div className="aspect-square mb-6 rounded-[2rem] overflow-hidden bg-card border border-white/10 relative p-2 transition-all duration-300 group-hover:border-primary/30 group-hover:shadow-[0_0_30px_rgba(255,122,0,0.15)]">
                     <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 z-10 transition-opacity"></div>
-                      <img 
-                        src={`https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=0A0A0A&color=FF7A00&size=256&bold=true`} 
+                      <img
+                        src={`https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=0A0A0A&color=FF7A00&size=256&bold=true`}
                         alt={member.name}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                       />

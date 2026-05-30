@@ -1,102 +1,50 @@
 import { useState } from "react";
 import { Layout } from "@/components/Layout";
 import { Reveal } from "@/components/Reveal";
-import { Button } from "@/components/Button";
 import { CTASection } from "@/components/CTASection";
 
-export default function CaseStudies() {
+export default function CaseStudiesNew() {
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "E-commerce", "SaaS", "Healthcare", "EdTech", "Real Estate"];
+  const categories = ["All", "E-Commerce", "Edtech"];
 
   const caseStudies = [
     {
       id: 1,
-      client: "FashionIndia.com",
-      industry: "E-commerce",
+      client: "Vantenstudio.com",
+      industry: "E-Commerce",
       challenge: "High CPA on Meta Ads during festive seasons and low repeat purchase rate.",
       approach: "Restructured account taxonomy, implemented dynamic creative optimization, and built specialized retention funnels.",
       metrics: [
         { label: "Increase in ROAS", value: "+320%" },
         { label: "Reduction in CPA", value: "-45%" },
-        { label: "YoY Revenue Growth", value: "2.8x" }
-      ]
+        { label: "YoY Revenue Growth", value: "2.8x" },
+      ],
     },
     {
       id: 2,
-      client: "TechStartup Mumbai",
-      industry: "SaaS",
-      challenge: "Struggling to gain visibility against global competitors for high-intent B2B keywords.",
-      approach: "Executed a programmatic SEO strategy creating 500+ bottom-of-funnel comparison pages alongside technical fixes.",
+      client: "MG Concept",
+      industry: "Edtech",
+      challenge: "Needed stronger digital demand generation and better conversion into online course sales in Delhi.",
+      approach: "Improved campaign targeting, refreshed offer-led creatives, and optimized the lead-to-sale journey for higher-intent conversions.",
       metrics: [
-        { label: "Organic Traffic Growth", value: "+220%" },
-        { label: "MQLs Generated", value: "850+" },
-        { label: "Page 1 Rankings", value: "120+" }
-      ]
+        { label: "Increase in Online Course Sales", value: "+40%" },
+        { label: "Lead Quality", value: "Improved" },
+        { label: "Market Focus", value: "Delhi" },
+      ],
     },
-    {
-      id: 3,
-      client: "HealthCare Plus Delhi",
-      industry: "Healthcare",
-      challenge: "Low appointment booking rates from Google Search Ads due to poor landing page experience.",
-      approach: "Complete overhaul of localized landing pages with CRO best practices and transition to value-based bidding.",
-      metrics: [
-        { label: "Increase in Leads", value: "+180%" },
-        { label: "Conversion Rate", value: "4.5% to 12%" },
-        { label: "Cost Per Booking", value: "-60%" }
-      ]
-    },
-    {
-      id: 4,
-      client: "EduTech Bangalore",
-      industry: "EdTech",
-      challenge: "High drop-off rate between app install and paid course enrollment.",
-      approach: "Implemented lifecycle marketing via email/WhatsApp and launched app-specific performance max campaigns.",
-      metrics: [
-        { label: "App Installs", value: "4x" },
-        { label: "Free to Paid Conv.", value: "+40%" },
-        { label: "Active Daily Users", value: "50k+" }
-      ]
-    },
-    {
-      id: 5,
-      client: "RealEstate Hub",
-      industry: "Real Estate",
-      challenge: "Generating high volume of junk leads wasting sales team bandwidth.",
-      approach: "Shifted from lead-gen objective to conversion objective focusing on qualified appointments, added pre-qualifying quiz.",
-      metrics: [
-        { label: "Lead Quality Score", value: "+75%" },
-        { label: "Cost Per Site Visit", value: "-30%" },
-        { label: "Units Sold via Ads", value: "45+" }
-      ]
-    },
-    {
-      id: 6,
-      client: "RetailKart",
-      industry: "E-commerce",
-      challenge: "Content production bottleneck preventing scaling of category pages.",
-      approach: "Deployed custom AI content generation pipeline with human editorial review to scale category descriptions.",
-      metrics: [
-        { label: "Pages Published", value: "5,000+" },
-        { label: "Long-tail Traffic", value: "+150%" },
-        { label: "Time to Publish", value: "-80%" }
-      ]
-    }
   ];
 
-  const filteredStudies = filter === "All" 
-    ? caseStudies 
-    : caseStudies.filter(study => study.industry === filter);
+  const filteredStudies = filter === "All" ? caseStudies : caseStudies.filter((study) => study.industry === filter);
 
   return (
-    <Layout title="Case Studies | GrowthLab" description="See how we've driven massive growth for our clients across various industries.">
-      {/* Hero */}
+    <Layout title="Case Studies | ER Marketers" description="Explore real growth outcomes delivered by ER Marketers across eCommerce and Edtech campaigns.">
       <section className="pt-24 pb-12 bg-card/20 border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Reveal>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Our <span className="text-primary">Impact</span></h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Growth <span className="text-primary">Outcomes</span> Across Industries</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real results for real businesses. Explore how our strategic interventions have transformed our clients' bottom lines.
+              See how strategic improvements in paid media, SEO, CRO, and lifecycle marketing translated into stronger business results.
             </p>
           </Reveal>
         </div>
@@ -104,8 +52,6 @@ export default function CaseStudies() {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Filters */}
           <Reveal delay={100}>
             <div className="flex flex-wrap justify-center gap-3 mb-16">
               {categories.map((cat) => (
@@ -113,8 +59,8 @@ export default function CaseStudies() {
                   key={cat}
                   onClick={() => setFilter(cat)}
                   className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                    filter === cat 
-                      ? "bg-primary text-primary-foreground shadow-[0_0_15px_rgba(0,255,255,0.2)]" 
+                    filter === cat
+                      ? "bg-primary text-primary-foreground shadow-[0_0_15px_rgba(0,255,255,0.2)]"
                       : "bg-card border border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"
                   }`}
                 >
@@ -124,7 +70,6 @@ export default function CaseStudies() {
             </div>
           </Reveal>
 
-          {/* Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredStudies.map((study, index) => (
               <Reveal key={study.id} type={index % 2 === 0 ? "left" : "right"}>
@@ -139,14 +84,14 @@ export default function CaseStudies() {
                         <h3 className="text-2xl font-bold">{study.client}</h3>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-4 mb-8 flex-1">
                       <div>
-                        <h4 className="text-sm font-semibold text-foreground/80 mb-1">The Challenge:</h4>
+                        <h4 className="text-sm font-semibold text-foreground/80 mb-1">Problem:</h4>
                         <p className="text-muted-foreground text-sm leading-relaxed">{study.challenge}</p>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-foreground/80 mb-1">Our Approach:</h4>
+                        <h4 className="text-sm font-semibold text-foreground/80 mb-1">What We Changed:</h4>
                         <p className="text-muted-foreground text-sm leading-relaxed">{study.approach}</p>
                       </div>
                     </div>

@@ -12,70 +12,70 @@
       { "label": "About", "href": "/about" },
       { "label": "Contact", "href": "/contact" }
     ],
-    "ctaLabel": "Get Started",
+    "ctaLabel": "Book A Growth Call",
     "ctaHref": "/contact"
   },
   "home": {
-    "seoTitle": "ER Marketers | Digital Growth Agency",
-    "heroBadge": "India's Premier Growth Agency",
-    "heroHeadlineLines": ["We Drive", "Digital Growth"],
-    "heroSubheadline": "We transform ambitious brands into market leaders through data-driven performance marketing, SEO, and AI-powered strategies.",
-    "trustedByLabel": "Trusted by industry leaders",
-    "trustedByBrands": ["TechCorp", "Innovate", "ScaleUp", "GlobalReach", "Apex Brands"],
+    "seoTitle": "Performance And AI Driven Marketing Agency In Delhi-NCR | Er Marketers",
+    "heroBadge": "Performance For Growth Focused Brands",
+    "heroHeadlineLines": ["Scale Revenue With", "Performance-First Marketing"],
+    "heroSubheadline": "We help brands generate qualified leads, drive sales, lower customer acquisition costs, and grow revenue through performance marketing and AI-driven strategies.",
+    "trustedByLabel": "Built for ambitious brands across Education, eCommerce, SaaS, Travel, and Services",
+    "trustedByBrands": ["Education", "eCommerce", "SaaS", "Travel", "Services"],
     "stats": [
-      { "value": "200+", "label": "Clients Scaled" },
-      { "value": "INR 500Cr+", "label": "Ad Spend Managed" },
-      { "value": "8+", "label": "Years Experience" }
+      { "value": "80+", "label": "Clients Scaled" },
+      { "value": "₹30Lac+", "label": "Ad Spend Managed Per Month" },
+      { "value": "8+", "label": "Years of Digital Growth Experience" }
     ],
     "services": [
       {
         "icon": "barChart3",
         "title": "Performance Marketing",
-        "desc": "Data-driven ad campaigns across Google & Meta that maximize ROI and lower acquisition costs."
+        "desc": "Plan, launch, and optimize Google and Meta campaigns designed to improve lead quality, reduce wasted spend, and scale revenue profitably."
       },
       {
         "icon": "search",
         "title": "SEO & Content",
-        "desc": "Dominate search rankings and drive high-intent organic traffic to your website consistently."
+        "desc": "Build long-term organic visibility with technical SEO, search-intent content, and pages designed to attract high-converting traffic."
       },
       {
         "icon": "sparkles",
-        "title": "AI Content Creation",
-        "desc": "Scale your content output 10x using proprietary AI workflows without losing the human touch."
+        "title": "AI Content Systems",
+        "desc": "Create blogs, landing page copy, ad variations, and content workflows faster with AI supported by human strategy and quality control."
       },
       {
         "icon": "target",
-        "title": "Marketing Strategy",
-        "desc": "Comprehensive go-to-market strategies tailored for the hyper-competitive Indian landscape."
+        "title": "Website Development",
+        "desc": "We build SEO-optimized, beautiful websites designed to improve trust, support conversions, and help your business grow online."
       }
     ],
     "caseStudies": [
       {
-        "client": "FashionIndia",
+        "client": "Fashion Brand",
         "industry": "E-commerce",
-        "metric": "+320%",
+        "metric": "+470%",
         "metricLabel": "ROAS on Meta Ads",
         "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop"
       },
       {
-        "client": "TechStartup Mumbai",
-        "industry": "SaaS",
-        "metric": "2.5x",
-        "metricLabel": "Organic Traffic YoY",
-        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+        "client": "Edtech Brand",
+        "industry": "Education",
+        "metric": "17000+",
+        "metricLabel": "Domestic & International Leads Generated While Reducing CAC",
+        "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
       },
       {
-        "client": "EduTech Hub",
-        "industry": "EdTech",
-        "metric": "-45%",
-        "metricLabel": "Cost Per Lead",
-        "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
+        "client": "Food & Beverages",
+        "industry": "Hospitality",
+        "metric": "+70%",
+        "metricLabel": "Social Media Engagement and Footfalls Increased",
+        "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800&h=600&fit=crop"
       }
     ]
   },
   "servicesPage": {
-    "seoTitle": "ER Marketers | Our Services",
-    "seoDescription": "Comprehensive digital marketing services including Performance Marketing, SEO, AI Content, and Strategy.",
+    "seoTitle": "Digital Marketing Services in India | Performance Marketing, SEO & AI Content",
+    "seoDescription": "Explore ER Marketers' digital marketing services including Google Ads, Meta Ads, SEO, content strategy, AI-powered content systems, website development, and growth consulting.",
     "heroEyebrow": "CAPABILITIES",
     "heroTitle": "Our Services",
     "heroSubtitle": "End-to-end digital growth solutions designed to elevate your brand, capture high-intent leads, and multiply your revenue.",
@@ -84,58 +84,58 @@
         "id": "performance",
         "icon": "barChart3",
         "title": "Performance Marketing",
-        "description": "Scale your revenue profitably with our advanced performance marketing strategies. We manage millions in ad spend across major platforms, focusing purely on metrics that matter: CPA, CAC, and ROAS.",
+        "description": "We manage Google Ads and Meta Ads with a sharp focus on lead quality, CAC, ROAS, and sales outcomes, not just clicks and impressions.",
         "features": [
-          "Google Ads (Search, Display, Performance Max)",
-          "Meta Ads (Facebook & Instagram)",
-          "Programmatic Advertising",
-          "Advanced Retargeting Funnels",
-          "Conversion Rate Optimization (CRO)"
+          "Google Ads: Search, Display, YouTube, Performance Max",
+          "Meta Ads: Facebook and Instagram",
+          "Retargeting and remarketing funnels",
+          "Landing page and funnel analysis",
+          "Conversion tracking and reporting"
         ]
       },
       {
         "id": "seo",
         "icon": "search",
         "title": "SEO & Content Strategy",
-        "description": "Build an organic growth engine that delivers high-intent traffic month over month. Our holistic approach combines technical excellence with authoritative content creation tailored for the Indian market.",
+        "description": "We improve rankings, organic traffic, and lead generation through technical SEO, search-intent content, and pages built to convert visitors into inquiries.",
         "features": [
-          "Comprehensive Technical SEO Audits",
-          "High-Authority Link Building",
-          "Local SEO Optimization for Indian Cities",
-          "Keyword Research & Mapping",
-          "Content Marketing Strategy"
+          "Technical SEO audits and fixes",
+          "Keyword mapping by funnel stage",
+          "Local SEO for city and regional searches",
+          "Service page and blog content strategy",
+          "Authority building and link acquisition"
         ]
       },
       {
         "id": "ai",
         "icon": "sparkles",
         "title": "AI Content Creation",
-        "description": "Leverage cutting-edge AI technology to produce high-quality, relevant content at scale. We combine AI efficiency with human editorial oversight to maintain brand voice across multiple languages.",
+        "description": "Use AI to speed up content production without sacrificing clarity, trust, or brand consistency. Ideal for scaling blogs, landing pages, ad copy, and nurture sequences.",
         "features": [
-          "AI-Powered Blog & Article Generation",
-          "Automated Social Media Scheduling",
-          "Multilingual Content (English & Hindi)",
-          "Email Marketing Copywriting",
-          "Product Description Generation"
+          "AI-assisted blog writing",
+          "Landing page and ad copy generation",
+          "Email and WhatsApp campaign copy",
+          "Multilingual content workflows",
+          "Human review for tone, accuracy, and conversion quality"
         ]
       },
       {
-        "id": "consultation",
+        "id": "website-development",
         "icon": "target",
-        "title": "Marketing Consultation",
-        "description": "Don't know where to start? Our seasoned strategists act as your fractional CMOs, building a custom blueprint for your brand's digital dominance.",
+        "title": "Website Development",
+        "description": "We design and build SEO-friendly, conversion-focused websites that look premium, load fast, and support real business growth.",
         "features": [
-          "Brand Strategy & Positioning",
-          "Go-to-Market (GTM) Planning",
-          "Advanced Analytics Setup",
-          "Competitor Analysis & Benchmarking",
-          "Marketing Tech Stack Architecture"
+          "Business website design and development",
+          "SEO-friendly page structures",
+          "Mobile-responsive layouts",
+          "Landing pages for lead generation",
+          "Conversion-focused UX improvements"
         ]
       }
     ]
   },
   "footer": {
-    "tagline": "India's premier digital marketing agency. We build scalable growth engines for ambitious brands.",
+    "tagline": "Performance marketing, SEO, and content systems built to help ambitious brands grow with clarity and consistency.",
     "companyLinks": [
       { "label": "About Us", "href": "/about" },
       { "label": "Services", "href": "/services" },
@@ -146,10 +146,10 @@
       { "label": "Performance Marketing", "href": "/services" },
       { "label": "SEO & Content", "href": "/services" },
       { "label": "AI Content Creation", "href": "/services" },
-      { "label": "Consultation", "href": "/services" }
+      { "label": "Website Development", "href": "/services" }
     ],
-    "newsletterTitle": "Stay Updated",
-    "newsletterBlurb": "Get the latest growth marketing strategies in your inbox.",
+    "newsletterTitle": "Get Growth Insights",
+    "newsletterBlurb": "Occasional practical insights on paid media, SEO, content, and conversion strategy.",
     "contactEmail": "hello@ermarketers.in",
     "contactPhoneDisplay": "+91 98765 43210",
     "contactPhoneTel": "+919876543210",

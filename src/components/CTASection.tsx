@@ -39,7 +39,7 @@ export function CTASection() {
           </div>
           <p className="mt-8 text-sm text-muted-foreground font-medium flex items-center justify-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary/80 animate-pulse"></span>
-            Join 200+ brands scaling with Er marketers
+            Join 80+ brands scaling with Er marketers
           </p>
         </Reveal>
       </div>

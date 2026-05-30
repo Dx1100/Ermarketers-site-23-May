@@ -21,7 +21,10 @@ export function Navbar() {
   useEffect(() => {
     if (!navRef.current) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    gsap.from(navRef.current, { y: -80, opacity: 0, duration: 0.9, ease: "power3.out", delay: 0.1 });
+    const ctx = gsap.context(() => {
+      gsap.from(navRef.current, { y: -80, opacity: 0, duration: 0.9, ease: "power3.out", delay: 0.1 });
+    });
+    return () => ctx.revert();
   }, []);
 
   useEffect(() => { setMobileMenuOpen(false); }, [location]);
