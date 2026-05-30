@@ -324,7 +324,7 @@ export default function Home() {
                   </p>
                   <ul className="space-y-6 mb-8 text-lg font-medium">
                     {[
-                      "Comprehensive SEO Analysis",
+                      "Full Funnel analysis",
                       "Ad Account Waste Identification",
                       "Competitor Benchmarking",
                     ].map((item, i) => (
