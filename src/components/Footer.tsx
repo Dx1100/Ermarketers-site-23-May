@@ -109,14 +109,6 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {currentYear} {siteContent.brand.namePlain}. {siteContent.footer.copyrightTail}
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href={siteContent.footer.legal.privacyHref} className="hover:text-white transition-colors">
-              {siteContent.footer.legal.privacyLabel}
-            </a>
-            <a href={siteContent.footer.legal.termsHref} className="hover:text-white transition-colors">
-              {siteContent.footer.legal.termsLabel}
-            </a>
-          </div>
         </div>
       </div>
     </footer>
