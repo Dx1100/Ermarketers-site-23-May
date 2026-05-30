@@ -22,9 +22,20 @@ export function Layout({
 }: LayoutProps) {
   const [location] = useLocation();
 
-  // Scroll to top on route change
+  // Scroll to top or to hash anchor on route change
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace("#", "");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 150); // slight delay to ensure components finish rendering
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [location]);
 
   // Animate section dividers

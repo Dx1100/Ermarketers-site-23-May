@@ -31,7 +31,7 @@ export default function Services() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 relative z-10">
           {servicesPage.services.map((service, index) => (
-            <div key={service.id} className={`flex flex-col lg:flex-row gap-16 lg:gap-24 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+            <div key={service.id} id={service.id} className={`flex flex-col lg:flex-row gap-16 lg:gap-24 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
               
               <Reveal className="w-full lg:w-1/2" type={index % 2 === 0 ? "left" : "right"}>
                 <div className="group glass-panel-strong p-10 md:p-14 rounded-[2.5rem] border-l-[3px] border-l-transparent hover:border-l-primary relative overflow-hidden transition-all duration-500">

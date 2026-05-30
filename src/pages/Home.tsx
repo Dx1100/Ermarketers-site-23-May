@@ -170,28 +170,33 @@ export default function Home() {
           </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {home.services.map((service, index) => (
-              <Reveal key={index} delay={index * 100}>
-                <div className="group relative glass-panel-strong p-8 rounded-3xl h-full card-hover overflow-hidden flex flex-col">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-deep-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="absolute top-6 right-6 text-3xl font-bold text-white/5 group-hover:text-primary/10 transition-colors">
-                    0{index + 1}
-                  </div>
+            {home.services.map((service, index) => {
+              const serviceIds = ["performance", "seo", "ai", "website-development"];
+              return (
+                <Reveal key={index} delay={index * 100}>
+                  <Link href={`/services#${serviceIds[index]}`} className="block h-full">
+                    <div className="group relative glass-panel-strong p-8 rounded-3xl h-full card-hover overflow-hidden flex flex-col cursor-pointer">
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-deep-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="absolute top-6 right-6 text-3xl font-bold text-white/5 group-hover:text-primary/10 transition-colors">
+                        0{index + 1}
+                      </div>
 
-                  <div className="relative z-10 flex-1 flex flex-col">
-                    <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 shadow-inner shadow-white/5 group-hover:border-primary/30 transition-colors">
-                      {getIcon(service.icon, "w-8 h-8 text-primary")}
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                    <p className="text-zinc-300 text-base leading-relaxed mb-8 flex-1">{service.desc}</p>
+                      <div className="relative z-10 flex-1 flex flex-col">
+                        <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 shadow-inner shadow-white/5 group-hover:border-primary/30 transition-colors">
+                          {getIcon(service.icon, "w-8 h-8 text-primary")}
+                        </div>
+                        <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                        <p className="text-zinc-300 text-base leading-relaxed mb-8 flex-1">{service.desc}</p>
 
-                    <div className="flex items-center gap-2 text-primary font-semibold mt-auto opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                      Explore <ArrowUpRight className="w-5 h-5" />
+                        <div className="flex items-center gap-2 text-primary font-semibold mt-auto opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                          Explore <ArrowUpRight className="w-5 h-5" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+                  </Link>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
