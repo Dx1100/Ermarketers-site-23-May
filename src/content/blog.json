@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1,
+    "slug": "performance-marketing-cracking-cac-code",
+    "title": "Performance Marketing in 2026: Cracking the CAC Code",
+    "excerpt": "As customer acquisition costs continue to climb across Meta and Google Ads, we break down the 3 core funnel optimization techniques to sustain profit margins.",
+    "category": "Paid Media",
+    "readTime": "6 min read",
+    "date": "May 28, 2026",
+    "author": "Rahul Sharma",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
+    "featured": true,
+    "seoTitle": "Cracking Customer Acquisition Costs in 2026 | ER Marketers",
+    "seoDescription": "Discover the 3 funnel optimization frameworks to lower CPA, improve Meta/Google ad returns, and beat rising CAC in 2026.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Over the past 24 months, media buyers and marketing directors have noticed a stark trend: Customer Acquisition Costs (CAC) on Meta, Google, and TikTok have surged by an average of 35-50% across most consumer and SaaS categories. The era of cheap clicks and lazy remarketing campaigns is officially behind us."
+      },
+      {
+        "type": "heading",
+        "text": "Why CAC is Rising Rapidly"
+      },
+      {
+        "type": "paragraph",
+        "text": "Several factors contribute to this climb: increased ad platform saturation, data privacy changes limiting precise targeting, and algorithmic shifts that prioritize broad targeting. When every brand targets similar audiences with similar formats, bidding wars escalate the Cost Per Mille (CPM) rates."
+      },
+      {
+        "type": "heading",
+        "text": "Tactical Pivot 1: Creative Diversity & Iteration Speed"
+      },
+      {
+        "type": "paragraph",
+        "text": "In modern performance marketing, creative is your primary targeting tool. Instead of relying on a single polished brand video, you must build high-velocity creative testing frameworks. This means creating variations of hooks, visual pacing, and calls-to-action (CTAs) weekly. The faster you find winning ad elements, the quicker you can scale spend while keeping Cost Per Acquisition (CPL/CPA) stable."
+      },
+      {
+        "type": "heading",
+        "text": "Tactical Pivot 2: Overhauling Funnel Friction"
+      },
+      {
+        "type": "paragraph",
+        "text": "If your site's landing page conversion rate sits at 1.5%, doubling your ad budget only increases waste. If you optimize user experience (UX), increase load speed, and streamline form inputs to reach a 3% conversion rate, you effectively cut your acquisition cost in half without spending an extra rupee on ads."
+      },
+      {
+        "type": "heading",
+        "text": "Tactical Pivot 3: Focus on Life-Time Value (LTV)"
+      },
+      {
+        "type": "paragraph",
+        "text": "The brand that can afford to spend the most to acquire a customer wins. To increase your maximum CAC threshold, you must build robust post-purchase email flows, WhatsApp campaigns, and loyalty offers. Maximizing average order value (AOV) and customer return rates is the ultimate defense against rising acquisition costs."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "technical-seo-checklist-converting-traffic",
+    "title": "Technical SEO Checklist: Driving High-Intent Traffic That Converts",
+    "excerpt": "Forget simple keyword stuffing. Learn how structure mapping, programmatic page schema, and Core Web Vitals directly impact bottom-line conversions.",
+    "category": "SEO",
+    "readTime": "8 min read",
+    "date": "May 15, 2026",
+    "author": "Ananya Roy",
+    "image": "https://images.unsplash.com/photo-1542744094-3a31f103e35f?w=800&h=600&fit=crop",
+    "seoTitle": "Technical SEO & CRO Best Practices | ER Marketers",
+    "seoDescription": "Improve search rankings and conversion rates simultaneously. A complete guide on Core Web Vitals, page structures, and keyword intent mapping.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Organic search is one of the most cost-effective acquisition channels, yet many brands treat SEO as an afterthought or focus solely on outputting bulk keyword-stuffed articles. True organic growth requires aligning technical website performance with user search intent."
+      },
+      {
+        "type": "heading",
+        "text": "The Technical Foundation: Speed & Core Web Vitals"
+      },
+      {
+        "type": "paragraph",
+        "text": "Google openly uses page speed and user experience metrics as ranking signals. Focus on improving your Largest Contentful Paint (LCP) and Cumulative Layout Shift (CLS). A website that loads in under 1.8 seconds not only ranks better but prevents visitors from bouncing before they read your content."
+      },
+      {
+        "type": "heading",
+        "text": "Intent Mapping: TOFU, MOFU, and BOFU"
+      },
+      {
+        "type": "paragraph",
+        "text": "Align your keyword research with stages of the buying funnel. Top-of-Funnel (TOFU) terms build awareness, while Bottom-of-Funnel (BOFU) transactional searches (e.g., 'performance marketing agency Delhi') bring users ready to request audits. Design different page layouts and CTAs for each funnel stage to maximize lead capture."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "scaling-content-production-human-strategy-ai-workflows",
+    "title": "Scaling Content Production: Integrating Human Strategy with AI Workflows",
+    "excerpt": "How we scaled content velocity by 3.5x for our SaaS partners while maintaining high editorial standards, tone of voice, and EEAT scoring.",
+    "category": "AI Content",
+    "readTime": "5 min read",
+    "date": "May 02, 2026",
+    "author": "Kabir Mehta",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
+    "seoTitle": "SaaS AI Content Workflows & Scaling Guide | ER Marketers",
+    "seoDescription": "Learn how to scale content output using AI tools without losing quality, search rank, or human authenticity.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "AI writing models have made content generation incredibly fast. However, publishing raw AI output is a quick path to losing rankings under Google's helpful content updates. The key to sustainable content scale is the 'human-in-the-loop' strategy."
+      },
+      {
+        "type": "heading",
+        "text": "Building the AI Content Workflow"
+      },
+      {
+        "type": "paragraph",
+        "text": "An effective workflow uses AI models for research outlines, structuring paragraphs, and generating raw drafts. From there, human editors take over to verify factual accuracy, inject brand voice, add proprietary statistics or case studies, and optimize for target keywords. This balance provides a 3.5x speed increase while preserving high quality."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "converting-clicks-to-clients-landing-page-anatomy",
+    "title": "Converting Clicks to Clients: The Anatomy of a High-Trust Landing Page",
+    "excerpt": "Every detail counts. Discover why changing form placements, adding social proof, and optimizing load times can lift lead conversion rate by up to 23%.",
+    "category": "CRO",
+    "readTime": "7 min read",
+    "date": "Apr 18, 2026",
+    "author": "Divya Kapoor",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
+    "seoTitle": "How to Build High-Converting Landing Pages | ER Marketers",
+    "seoDescription": "Increase form submissions and lead volume. Explore the structural changes that can raise conversion rate by up to 23%.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Driving traffic to a page is only half the battle. If your landing page lacks clear hierarchy, trust signals, and direct call-to-actions, you are leaving money on the table."
+      },
+      {
+        "type": "heading",
+        "text": "The Above-The-Fold Rule"
+      },
+      {
+        "type": "paragraph",
+        "text": "Within the first 3 seconds, a user must understand what you offer, why they should care, and what step to take next. Keep your headline clear rather than clever. Ensure the lead submission form or primary CTA button is visible without scrolling."
+      },
+      {
+        "type": "heading",
+        "text": "Social Proof is Non-Negotiable"
+      },
+      {
+        "type": "paragraph",
+        "text": "Display reviews, client logos, case studies, and testimonials near your form. Users need reassurance that others have successfully used your services before they trust you with their business details."
+      }
+    ]
+  }
+]

@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Layout } from "@/components/Layout";
 import { Reveal } from "@/components/Reveal";
 import { CTASection } from "@/components/CTASection";
 import { Search, Calendar, Clock, User, ArrowRight } from "lucide-react";
+import rawPosts from "@/content/blog.json";
 
 interface BlogPost {
   id: number;
+  slug: string;
   title: string;
   excerpt: string;
   category: string;
@@ -16,55 +19,13 @@ interface BlogPost {
   featured?: boolean;
 }
 
+const posts = rawPosts as BlogPost[];
+
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
   const categories = ["All", "Paid Media", "SEO", "AI Content", "CRO"];
-
-  const posts: BlogPost[] = [
-    {
-      id: 1,
-      title: "Performance Marketing in 2026: Cracking the CAC Code",
-      excerpt: "As customer acquisition costs continue to climb across Meta and Google Ads, we break down the 3 core funnel optimization techniques to sustain profit margins.",
-      category: "Paid Media",
-      readTime: "6 min read",
-      date: "May 28, 2026",
-      author: "Rahul Sharma",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "Technical SEO Checklist: Driving High-Intent Traffic That Converts",
-      excerpt: "Forget simple keyword stuffing. Learn how structure mapping, programmatic page schema, and Core Web Vitals directly impact bottom-line conversions.",
-      category: "SEO",
-      readTime: "8 min read",
-      date: "May 15, 2026",
-      author: "Ananya Roy",
-      image: "https://images.unsplash.com/photo-1542744094-3a31f103e35f?w=800&h=600&fit=crop",
-    },
-    {
-      id: 3,
-      title: "Scaling Content Production: Integrating Human Strategy with AI Workflows",
-      excerpt: "How we scaled content velocity by 3.5x for our SaaS partners while maintaining high editorial standards, tone of voice, and EEAT scoring.",
-      category: "AI Content",
-      readTime: "5 min read",
-      date: "May 02, 2026",
-      author: "Kabir Mehta",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
-    },
-    {
-      id: 4,
-      title: "Converting Clicks to Clients: The Anatomy of a High-Trust Landing Page",
-      excerpt: "Every detail counts. Discover why changing form placements, adding social proof, and optimizing load times can lift lead conversion rate by up to 23%.",
-      category: "CRO",
-      readTime: "7 min read",
-      date: "Apr 18, 2026",
-      author: "Divya Kapoor",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
-    },
-  ];
 
   // Filtering Logic
   const filteredPosts = posts.filter((post) => {
@@ -133,52 +94,54 @@ export default function Blog() {
             </Reveal>
           </div>
 
-          {/* Featured Post Card (only shows when category is 'All' and search query is empty) */}
+          {/* Featured Post Card */}
           {selectedCategory === "All" && searchQuery === "" && featuredPost && (
             <Reveal delay={200} className="mb-16">
-              <div className="group relative rounded-3xl overflow-hidden glass-panel-strong border border-white/10 p-6 md:p-8 flex flex-col lg:flex-row gap-8 hover:border-primary/20 transition-all duration-300">
-                <div className="absolute inset-0 bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                
-                {/* Featured Post Thumbnail */}
-                <div className="w-full lg:w-1/2 aspect-[16/10] lg:aspect-auto lg:h-[360px] rounded-2xl overflow-hidden relative">
-                  <img
-                    src={featuredPost.image}
-                    alt={featuredPost.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground font-bold text-xs px-3.5 py-1.5 rounded-lg uppercase tracking-wide">
-                    Featured
-                  </div>
-                </div>
-
-                {/* Featured Post Details */}
-                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
-                    <span className="text-primary font-bold uppercase tracking-wider">{featuredPost.category}</span>
-                    <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{featuredPost.date}</span>
-                    <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" />{featuredPost.readTime}</span>
-                  </div>
+              <Link href={`/blog/${featuredPost.slug}`}>
+                <div className="group relative rounded-3xl overflow-hidden glass-panel-strong border border-white/10 p-6 md:p-8 flex flex-col lg:flex-row gap-8 hover:border-primary/20 hover:cursor-pointer transition-all duration-300">
+                  <div className="absolute inset-0 bg-primary/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 group-hover:text-primary transition-colors text-white leading-tight">
-                    {featuredPost.title}
-                  </h2>
-                  <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
-                    {featuredPost.excerpt}
-                  </p>
-
-                  <div className="flex items-center justify-between pt-6 border-t border-white/10 mt-auto">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-primary font-semibold text-xs border border-white/10">
-                        <User className="w-3.5 h-3.5" />
-                      </div>
-                      <span className="text-sm font-medium text-white/80">{featuredPost.author}</span>
+                  {/* Featured Post Thumbnail */}
+                  <div className="w-full lg:w-1/2 aspect-[16/10] lg:aspect-auto lg:h-[360px] rounded-2xl overflow-hidden relative">
+                    <img
+                      src={featuredPost.image}
+                      alt={featuredPost.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute top-4 left-4 bg-primary text-primary-foreground font-bold text-xs px-3.5 py-1.5 rounded-lg uppercase tracking-wide">
+                      Featured
                     </div>
-                    <span className="flex items-center gap-1 text-sm font-bold text-primary group-hover:translate-x-1.5 transition-transform">
-                      Read Article <ArrowRight className="w-4 h-4" />
-                    </span>
+                  </div>
+
+                  {/* Featured Post Details */}
+                  <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                    <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
+                      <span className="text-primary font-bold uppercase tracking-wider">{featuredPost.category}</span>
+                      <span className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" />{featuredPost.date}</span>
+                      <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" />{featuredPost.readTime}</span>
+                    </div>
+                    
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 group-hover:text-primary transition-colors text-white leading-tight">
+                      {featuredPost.title}
+                    </h2>
+                    <p className="text-muted-foreground text-base leading-relaxed mb-6 flex-1">
+                      {featuredPost.excerpt}
+                    </p>
+
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10 mt-auto">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-primary font-semibold text-xs border border-white/10">
+                          <User className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="text-sm font-medium text-white/80">{featuredPost.author}</span>
+                      </div>
+                      <span className="flex items-center gap-1 text-sm font-bold text-primary group-hover:translate-x-1.5 transition-transform">
+                        Read Article <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           )}
 
@@ -186,45 +149,47 @@ export default function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post, index) => (
               <Reveal key={post.id} delay={100 + index * 50}>
-                <div className="group glass-panel rounded-2xl overflow-hidden flex flex-col h-full hover:border-primary/20 transition-all duration-300">
-                  <div className="aspect-[16/10] overflow-hidden relative">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-primary font-semibold text-xs px-3 py-1 rounded-lg">
-                      {post.category}
-                    </div>
-                  </div>
-
-                  <div className="p-6 flex flex-col flex-grow">
-                    <div className="flex items-center gap-3 text-[11px] text-muted-foreground mb-3">
-                      <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{post.date}</span>
-                      <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{post.readTime}</span>
-                    </div>
-
-                    <h3 className="text-xl font-bold mb-3 line-clamp-2 text-white group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-6 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-
-                    <div className="flex items-center justify-between pt-4 border-t border-white/5 mt-auto">
-                      <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-primary font-semibold text-[10px] border border-white/10">
-                          <User className="w-3 h-3" />
-                        </div>
-                        <span className="text-xs font-medium text-white/80">{post.author}</span>
+                <Link href={`/blog/${post.slug}`}>
+                  <div className="group glass-panel rounded-2xl overflow-hidden flex flex-col h-full hover:border-primary/20 hover:cursor-pointer transition-all duration-300">
+                    <div className="aspect-[16/10] overflow-hidden relative">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-primary font-semibold text-xs px-3 py-1 rounded-lg">
+                        {post.category}
                       </div>
-                      <span className="flex items-center gap-0.5 text-xs font-bold text-primary group-hover:translate-x-1 transition-transform">
-                        Read More <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
+                    </div>
+
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="flex items-center gap-3 text-[11px] text-muted-foreground mb-3">
+                        <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{post.date}</span>
+                        <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{post.readTime}</span>
+                      </div>
+
+                      <h3 className="text-xl font-bold mb-3 line-clamp-2 text-white group-hover:text-primary transition-colors">
+                        {post.title}
+                      </h3>
+                      
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-6 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+
+                      <div className="flex items-center justify-between pt-4 border-t border-white/5 mt-auto">
+                        <div className="flex items-center gap-2">
+                          <div className="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-primary font-semibold text-[10px] border border-white/10">
+                            <User className="w-3.5 h-3.5" />
+                          </div>
+                          <span className="text-xs font-medium text-white/80">{post.author}</span>
+                        </div>
+                        <span className="flex items-center gap-0.5 text-xs font-bold text-primary group-hover:translate-x-1 transition-transform">
+                          Read More <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>
