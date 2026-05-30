@@ -113,10 +113,11 @@
         "title": "AI Content Creation",
         "description": "Use AI to speed up content production without sacrificing clarity, trust, or brand consistency. Ideal for scaling blogs, landing pages, ad copy, and nurture sequences.",
         "features": [
-          "AI-assisted blog writing",
+          "AI Photoshoot",
+          "Social Media creation",
+          "Brand shoot/Video using AI",
           "Landing page and ad copy generation",
           "Email and WhatsApp campaign copy",
-          "Multilingual content workflows",
           "Human review for tone, accuracy, and conversion quality"
         ]
       },
