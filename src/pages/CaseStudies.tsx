@@ -3,7 +3,7 @@ import { Layout } from "@/components/Layout";
 import { Reveal } from "@/components/Reveal";
 import { CTASection } from "@/components/CTASection";
 
-export default function CaseStudiesNew() {
+export default function CaseStudies() {
   const [filter, setFilter] = useState("All");
 
   const categories = ["All", "E-Commerce", "Edtech"];

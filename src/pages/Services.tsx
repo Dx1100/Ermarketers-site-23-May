@@ -5,12 +5,12 @@ import { CheckCircle2 } from "lucide-react";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { siteNewContent } from "@/content/siteNewContent";
+import { siteContent } from "@/content/siteContent";
 import { getIcon } from "@/content/iconMap";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ServicesNew() {
+export default function Services() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -30,7 +30,7 @@ export default function ServicesNew() {
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
-  const { servicesPage } = siteNewContent;
+  const { servicesPage } = siteContent;
 
   return (
     <Layout title={servicesPage.seoTitle} description={servicesPage.seoDescription}>

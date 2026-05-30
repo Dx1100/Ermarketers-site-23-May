@@ -7,12 +7,12 @@ import { LeadForm } from "@/components/LeadForm";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { siteNewContent } from "@/content/siteNewContent";
+import { siteContent } from "@/content/siteContent";
 import { getIcon } from "@/content/iconMap";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function HomeNew() {
+export default function Home() {
   const heroBgRef = useRef<HTMLDivElement>(null);
   const heroContentRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -63,7 +63,7 @@ export default function HomeNew() {
     });
   }, []);
 
-  const { home } = siteNewContent;
+  const { home } = siteContent;
 
   return (
     <Layout title={home.seoTitle}>

@@ -3,7 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { LeadForm } from "@/components/LeadForm";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
-export default function ContactNew() {
+export default function Contact() {
   return (
     <Layout title="Er marketers | Contact Us" description="Get in touch with our team to start your digital growth journey.">
       <section className="py-32 relative overflow-hidden">
