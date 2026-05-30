@@ -183,7 +183,7 @@ export default function Home() {
                       {getIcon(service.icon, "w-8 h-8 text-primary")}
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                    <p className="text-muted-foreground text-base leading-relaxed mb-8 flex-1">{service.desc}</p>
+                    <p className="text-zinc-300 text-base leading-relaxed mb-8 flex-1">{service.desc}</p>
 
                     <div className="flex items-center gap-2 text-primary font-semibold mt-auto opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                       Explore <ArrowUpRight className="w-5 h-5" />

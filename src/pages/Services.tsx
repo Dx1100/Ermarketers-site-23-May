@@ -2,34 +2,10 @@ import { Layout } from "@/components/Layout";
 import { CTASection } from "@/components/CTASection";
 import { Reveal } from "@/components/Reveal";
 import { CheckCircle2 } from "lucide-react";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { siteContent } from "@/content/siteContent";
 import { getIcon } from "@/content/iconMap";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Services() {
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    gsap.from("[data-service-card]", {
-      opacity: 0,
-      y: 60,
-      duration: 0.8,
-      stagger: { each: 0.15, from: "start" },
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "[data-service-card]",
-        start: "top 85%",
-        once: true,
-      },
-    });
-
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
-  }, []);
-
   const { servicesPage } = siteContent;
 
   return (
@@ -43,7 +19,7 @@ export default function Services() {
             <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight">
               Our <span className="text-gradient">{servicesPage.heroTitle.replace("Our ", "")}</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-medium leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-medium leading-relaxed">
               {servicesPage.heroSubtitle}
             </p>
           </Reveal>
@@ -56,31 +32,32 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 relative z-10">
           {servicesPage.services.map((service, index) => (
             <div key={service.id} className={`flex flex-col lg:flex-row gap-16 lg:gap-24 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-              <div className="w-full lg:w-1/2">
-                <div data-service-card className="group glass-panel-strong p-10 md:p-14 rounded-[2.5rem] border-l-[3px] border-l-transparent hover:border-l-primary relative overflow-hidden transition-all duration-500">
+              
+              <Reveal className="w-full lg:w-1/2" type={index % 2 === 0 ? "left" : "right"}>
+                <div className="group glass-panel-strong p-10 md:p-14 rounded-[2.5rem] border-l-[3px] border-l-transparent hover:border-l-primary relative overflow-hidden transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                   <div className="relative z-10">
                     <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center mb-10 shadow-inner shadow-white/5 animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
                       {getIcon(service.icon, "w-12 h-12 text-primary")}
                     </div>
                     <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-white">{service.title}</h2>
-                    <p className="text-lg text-white/70 leading-relaxed mb-10">
+                    <p className="text-lg text-zinc-300 leading-relaxed mb-10">
                       {service.description}
                     </p>
                     <ul className="space-y-5">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-4">
                           <CheckCircle2 className="w-6 h-6 text-primary shrink-0 drop-shadow-[0_0_8px_rgba(255,122,0,0.5)]" />
-                          <span className="text-white/90 font-medium text-lg">{feature}</span>
+                          <span className="text-zinc-100 font-medium text-lg">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-              </div>
+              </Reveal>
 
-              <div className="w-full lg:w-1/2">
-                <div data-service-card className="aspect-square max-w-[500px] mx-auto rounded-[3rem] gradient-border bg-card/40 backdrop-blur-md relative overflow-hidden flex items-center justify-center p-10 shadow-2xl">
+              <Reveal className="w-full lg:w-1/2" type={index % 2 === 0 ? "right" : "left"}>
+                <div className="aspect-square max-w-[500px] mx-auto rounded-[3rem] gradient-border bg-card/40 backdrop-blur-md relative overflow-hidden flex items-center justify-center p-10 shadow-2xl">
                   <div className="absolute inset-0 mesh-bg opacity-40"></div>
 
                   <div className="relative z-10 w-full h-full border border-white/10 rounded-[2rem] bg-background/60 backdrop-blur-xl shadow-2xl flex flex-col p-8 card-hover">
@@ -100,7 +77,7 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             </div>
           ))}
         </div>
