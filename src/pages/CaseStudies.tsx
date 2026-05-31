@@ -110,8 +110,8 @@ export default function CaseStudies() {
 
                     <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border/50">
                       {study.metrics.map((metric, idx) => (
-                        <div key={idx}>
-                          <div className="number-stat mb-1">{metric.value}</div>
+                        <div key={idx} className="min-w-0">
+                          <div className="number-stat-card mb-1 pb-1 whitespace-nowrap">{metric.value}</div>
                           <div className="text-xs text-muted-foreground leading-tight">{metric.label}</div>
                         </div>
                       ))}
