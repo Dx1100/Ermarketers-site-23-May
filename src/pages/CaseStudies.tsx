@@ -30,7 +30,7 @@ export default function CaseStudies() {
       metrics: [
         { label: "Increase in Online Course Sales", value: "+40%" },
         { label: "Lead Quality", value: "Improved" },
-        { label: "Market Focus", value: "Delhi" },
+        { label: "Market Focus", value: "PAN India" },
       ],
     },
     {
