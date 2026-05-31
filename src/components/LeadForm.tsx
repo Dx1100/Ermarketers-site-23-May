@@ -77,7 +77,7 @@ export function LeadForm({
     try {
       const res = await fetch(leadsEndpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
           ...fields,
           source,
