@@ -20,7 +20,7 @@ export default function About() {
         start: "top 80%",
         once: true,
         onEnter: () => {
-          gsap.from({ val: 0 }, {
+          gsap.to({ val: 0 }, {
             val: target,
             duration: 2,
             ease: "power2.out",
