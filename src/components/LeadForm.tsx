@@ -119,20 +119,20 @@ export function LeadForm({
       {/* Row 1: Name + Email */}
       <div className={cn("grid grid-cols-1 sm:grid-cols-2", gap)}>
         <Field label="Full Name" error={errors.name}>
-          <Input value={fields.name} onChange={set("name")} placeholder="Rahul Sharma" disabled={status === "submitting"} className={errors.name ? "border-red-500" : ""} />
+          <Input value={fields.name} onChange={set("name")} placeholder="" disabled={status === "submitting"} className={errors.name ? "border-red-500" : ""} />
         </Field>
         <Field label="Email Address" error={errors.email}>
-          <Input type="email" value={fields.email} onChange={set("email")} placeholder="rahul@company.com" disabled={status === "submitting"} className={errors.email ? "border-red-500" : ""} />
+          <Input type="email" value={fields.email} onChange={set("email")} placeholder="" disabled={status === "submitting"} className={errors.email ? "border-red-500" : ""} />
         </Field>
       </div>
 
       {/* Row 2: Phone + Company */}
       <div className={cn("grid grid-cols-1 sm:grid-cols-2", gap)}>
         <Field label="Phone Number" error={errors.phone}>
-          <Input type="tel" value={fields.phone} onChange={set("phone")} placeholder="+91 98765 43210" disabled={status === "submitting"} className={errors.phone ? "border-red-500" : ""} />
+          <Input type="tel" value={fields.phone} onChange={set("phone")} placeholder="" disabled={status === "submitting"} className={errors.phone ? "border-red-500" : ""} />
         </Field>
         <Field label="Company Name" error={errors.company}>
-          <Input value={fields.company} onChange={set("company")} placeholder="Your Company Pvt Ltd" disabled={status === "submitting"} className={errors.company ? "border-red-500" : ""} />
+          <Input value={fields.company} onChange={set("company")} placeholder="" disabled={status === "submitting"} className={errors.company ? "border-red-500" : ""} />
         </Field>
       </div>
 

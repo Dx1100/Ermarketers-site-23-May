@@ -43,7 +43,7 @@ export function Navbar() {
         <div className={cn(
           "flex justify-between items-center px-5 md:px-8 h-16 md:h-[68px] transition-all duration-500",
           isScrolled
-            ? "rounded-2xl glass-panel-strong shadow-xl shadow-black/30 border border-white/8"
+            ? "rounded-2xl bg-[#09090c] shadow-2xl shadow-black/40 border border-white/10"
             : "rounded-2xl"
         )}>
           {/* Logo */}
@@ -102,7 +102,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       <div className={cn(
-        "md:hidden mx-4 glass-panel-strong rounded-2xl border border-white/8 transition-all duration-300 overflow-hidden",
+        "md:hidden mx-4 bg-[#09090c] shadow-2xl rounded-2xl border border-white/8 transition-all duration-300 overflow-hidden",
         mobileMenuOpen ? "max-h-[400px] opacity-100 mt-1" : "max-h-0 opacity-0"
       )}>
         <nav className="flex flex-col p-4 gap-1">
@@ -111,10 +111,10 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "px-4 py-3 rounded-xl text-sm font-medium transition-all",
+                "px-4 py-3 rounded-xl text-sm font-semibold transition-all",
                 location === link.href
-                  ? "bg-primary/10 text-primary border border-primary/20"
-                  : "text-white/60 hover:bg-white/5 hover:text-white"
+                  ? "bg-primary/15 text-primary border border-primary/30"
+                  : "text-white/80 hover:bg-white/5 hover:text-white"
               )}
             >
               {link.label}
@@ -122,7 +122,7 @@ export function Navbar() {
           ))}
           <div className="pt-3 mt-2 border-t border-white/8">
             <Link href={siteContent.nav.ctaHref} className="block">
-              <Button className="w-full justify-center gap-2" variant="gradient">
+              <Button className="w-full justify-center gap-2 font-bold" variant="gradient">
                 {siteContent.nav.ctaLabel} <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>

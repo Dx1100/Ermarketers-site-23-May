@@ -219,7 +219,7 @@ export function LeadPopup() {
                     id="popup-name"
                     name="name"
                     type="text"
-                    placeholder="Rahul Sharma"
+                    placeholder=""
                     value={fields.name}
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -244,7 +244,7 @@ export function LeadPopup() {
                     id="popup-email"
                     name="email"
                     type="email"
-                    placeholder="rahul@company.com"
+                    placeholder=""
                     value={fields.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
@@ -269,7 +269,7 @@ export function LeadPopup() {
                     id="popup-phone"
                     name="phone"
                     type="tel"
-                    placeholder="+91 98765 43210"
+                    placeholder=""
                     value={fields.phone}
                     onChange={handleChange}
                     onBlur={handleBlur}
