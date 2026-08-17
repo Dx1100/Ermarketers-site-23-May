@@ -151,9 +151,44 @@ export default function BlogPostDetail() {
                     </h2>
                   );
                 }
+                
+                // Helper to render markdown-style links: [Label](url)
+                const renderTextWithLinks = (text: string) => {
+                  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+                  return parts.map((part, index) => {
+                    const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                    if (match) {
+                      const [, label, href] = match;
+                      const isExternal = href.startsWith("http");
+                      if (isExternal) {
+                        return (
+                          <a
+                            key={index}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline font-semibold"
+                          >
+                            {label}
+                          </a>
+                        );
+                      } else {
+                        return (
+                          <Link key={index} href={href}>
+                            <span className="text-primary hover:underline font-semibold cursor-pointer">
+                              {label}
+                            </span>
+                          </Link>
+                        );
+                      }
+                    }
+                    return part;
+                  });
+                };
+
                 return (
                   <p key={i} className="text-white/70">
-                    {block.text}
+                    {renderTextWithLinks(block.text)}
                   </p>
                 );
               })}
