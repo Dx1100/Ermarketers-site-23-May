@@ -5,7 +5,7 @@ import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export default function Contact() {
   return (
-    <Layout title="Er marketers | Contact Us" description="Get in touch with our team to start your digital growth journey.">
+    <Layout title="ER Marketers | Contact Us" description="Get in touch with our team to start your digital growth journey.">
       <section className="py-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute -top-20 -right-20 w-[400px] h-[400px] border-[1px] border-primary/20 rounded-full animate-spin-slow pointer-events-none"></div>
@@ -15,7 +15,7 @@ export default function Contact() {
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-20">
               <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-bold tracking-widest mb-6">REACH OUT</div>
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight">Let's <span className="text-gradient">Talk Growth</span></h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tight">Let's <span className="text-gradient">Talk Growth</span></h1>
               <p className="text-xl text-white/70 font-medium leading-relaxed">
                 Whether you need a full-funnel strategy or a specialized campaign, our team is ready to analyze your business and map out a growth plan.
               </p>

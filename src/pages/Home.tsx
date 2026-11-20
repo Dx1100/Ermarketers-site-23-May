@@ -96,21 +96,24 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <h1 ref={headlineRef} className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-[1.05]">
+            <h1 ref={headlineRef} className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.12]">
               <span className="hero-line block text-white drop-shadow-lg">{home.heroHeadlineLines[0]}</span>
               <span className="hero-line block text-gradient pb-2 drop-shadow-2xl">{home.heroHeadlineLines[1]}</span>
             </h1>
 
             <Reveal delay={200}>
-              <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed font-normal">
                 {home.heroSubheadline}
               </p>
             </Reveal>
 
             <Reveal delay={300}>
               <div className="flex flex-col sm:flex-row gap-5 justify-center mb-16">
-                <Button size="xl" variant="gradient" className="gap-2 shadow-2xl shadow-primary/20" onClick={() => document.getElementById("audit-form")?.scrollIntoView()}>
-                  Get a Free Audit <ArrowRight className="w-5 h-5" />
+                <Button size="xl" variant="gradient" className="gap-3 shadow-2xl shadow-primary/20 pr-4 group" onClick={() => document.getElementById("audit-form")?.scrollIntoView()}>
+                  Get a Free Audit 
+                  <span className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center transition-transform group-hover:translate-x-1">
+                    <ArrowRight className="w-4 h-4 text-white" />
+                  </span>
                 </Button>
                 <Link href="/case-studies">
                   <Button size="xl" variant="outline" className="bg-background/40 backdrop-blur-md hover:border-primary/50">
@@ -137,14 +140,14 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full section-divider animate-shimmer" style={{ backgroundSize: "200% 100%" }}></div>
       </section>
 
-      <section className="py-12 -mt-16 relative z-20">
+      <section className="py-10 md:py-12 -mt-8 md:-mt-16 relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {home.stats.map((stat, i) => (
               <Reveal key={i} delay={i * 100}>
                 <div className="glass-panel-strong p-6 md:p-8 rounded-2xl text-center border-t border-t-primary/20">
-                  <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">{stat.value}</div>
-                  <div className="text-sm md:text-base text-primary font-medium tracking-wide uppercase">{stat.label}</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">{stat.value}</div>
+                  <div className="text-xs sm:text-sm md:text-base text-primary font-medium tracking-wide uppercase">{stat.label}</div>
                 </div>
               </Reveal>
             ))}
@@ -169,27 +172,27 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5 xl:gap-6">
             {home.services.map((service, index) => {
               const serviceIds = ["performance", "seo", "ai", "website-development"];
               return (
                 <Reveal key={index} delay={index * 100}>
                   <Link href={`/services#${serviceIds[index]}`} className="block h-full">
-                    <div className="group relative glass-panel-strong p-8 rounded-3xl h-full card-hover overflow-hidden flex flex-col cursor-pointer">
+                    <div className="group relative glass-panel-strong p-7 lg:p-6 xl:p-8 rounded-3xl h-full card-hover overflow-hidden flex flex-col cursor-pointer">
                       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-deep-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       <div className="absolute top-6 right-6 text-3xl font-bold text-white/5 group-hover:text-primary/10 transition-colors">
                         0{index + 1}
                       </div>
 
                       <div className="relative z-10 flex-1 flex flex-col">
-                        <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 shadow-inner shadow-white/5 group-hover:border-primary/30 transition-colors">
-                          {getIcon(service.icon, "w-8 h-8 text-primary")}
+                        <div className="w-14 h-14 xl:w-16 xl:h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 xl:mb-8 shadow-inner shadow-white/5 group-hover:border-primary/30 transition-colors">
+                          {getIcon(service.icon, "w-7 h-7 xl:w-8 xl:h-8 text-primary")}
                         </div>
-                        <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                        <p className="text-zinc-300 text-base leading-relaxed mb-8 flex-1">{service.desc}</p>
+                        <h3 className="text-xl xl:text-2xl font-bold mb-3">{service.title}</h3>
+                        <p className="text-zinc-300 text-sm xl:text-base leading-relaxed mb-6 flex-1 min-h-[72px]">{service.desc}</p>
 
-                        <div className="flex items-center gap-2 text-primary font-semibold mt-auto opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                          Explore <ArrowUpRight className="w-5 h-5" />
+                        <div className="flex items-center gap-2 text-primary font-semibold mt-auto opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-sm">
+                          Explore <ArrowUpRight className="w-4 h-4 xl:w-5 xl:h-5" />
                         </div>
                       </div>
                     </div>
@@ -215,7 +218,7 @@ export default function Home() {
             {home.caseStudies.map((study, index) => (
               <Reveal key={index} delay={index * 100} type="scale">
                 <Link href="/case-studies" className="block group">
-                  <div className="relative rounded-3xl overflow-hidden h-96 card-hover border border-white/10">
+                  <div className="relative rounded-3xl overflow-hidden min-h-[380px] sm:h-96 card-hover border border-white/10">
                     <img
                       src={study.image}
                       alt={study.client}

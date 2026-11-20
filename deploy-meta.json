@@ -1,0 +1,9 @@
+{
+  "site_name": "ER Marketers",
+  "local_path": "C:/Users/My time/Desktop/Testing/WEBSITE_PORTFOLIO/ermarketers-site",
+  "hosting_provider": "Vercel",
+  "vercel_project_name": "replit-agency-live",
+  "github_repo": "Dx1100/Ermarketers-site-23-May",
+  "production_url": "https://ermarketers.com",
+  "deploy_command": "npx vercel --prod"
+}

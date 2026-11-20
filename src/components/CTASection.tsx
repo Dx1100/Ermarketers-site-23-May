@@ -18,17 +18,20 @@ export function CTASection() {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <Reveal>
-          <h2 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tight leading-tight">
             Ready to Scale Your <br className="hidden sm:block" />
             <span className="text-gradient">Digital Presence?</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             Stop leaving money on the table. Partner with India's most data-driven digital growth agency and dominate your market.
           </p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <Link href="/contact" className="w-full sm:w-auto">
-              <Button size="xl" variant="gradient" className="w-full sm:w-auto shadow-2xl shadow-primary/20">
-                Get a Free Audit <ArrowRight className="w-5 h-5 ml-1" />
+              <Button size="xl" variant="gradient" className="w-full sm:w-auto shadow-2xl shadow-primary/20 gap-3 pr-4 group">
+                Get a Free Audit 
+                <span className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center transition-transform group-hover:translate-x-1">
+                  <ArrowRight className="w-4 h-4 text-white" />
+                </span>
               </Button>
             </Link>
             <Link href="/services" className="w-full sm:w-auto">
@@ -39,7 +42,7 @@ export function CTASection() {
           </div>
           <p className="mt-8 text-sm text-muted-foreground font-medium flex items-center justify-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary/80 animate-pulse"></span>
-            Join 80+ brands scaling with Er marketers
+            Join 80+ brands scaling with ER Marketers
           </p>
         </Reveal>
       </div>

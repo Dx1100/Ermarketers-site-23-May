@@ -82,15 +82,15 @@ export default function About() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel-strong gradient-border rounded-[2.5rem] p-10 md:p-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 divide-x divide-white/10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {stats.map((stat, i) => (
-                <Reveal key={i} delay={i * 100} className="text-center px-4">
+                <Reveal key={i} delay={i * 100} className="text-center p-6 rounded-2xl bg-white/[0.02] border border-white/5">
                   <div className="number-stat mb-3">
                     {stat.prefix}
                     <span data-count-up data-count-value={stat.value}>0</span>
                     {stat.suffix}
                   </div>
-                  <div className="text-sm md:text-base font-bold text-white/60 uppercase tracking-widest">{stat.label}</div>
+                  <div className="text-xs sm:text-sm md:text-base font-bold text-white/70 uppercase tracking-wider">{stat.label}</div>
                 </Reveal>
               ))}
             </div>

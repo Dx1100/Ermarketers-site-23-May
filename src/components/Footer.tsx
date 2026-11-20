@@ -107,7 +107,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} {siteContent.brand.namePlain}. {siteContent.footer.copyrightTail}
+            © {currentYear} {siteContent.brand.namePlain} {siteContent.brand.nameAccent}. {siteContent.footer.copyrightTail}
           </p>
         </div>
       </div>
